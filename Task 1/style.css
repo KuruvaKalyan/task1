@@ -15,6 +15,7 @@ body{
 .header{
     display:flex;
     justify-content: space-between;
+    align-items: center;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -30,7 +31,7 @@ body{
     align-items: center;
 }
 
-.menu-btn{
+.menu-btn-a-tag{
     display: none;
 }
 
@@ -128,18 +129,22 @@ p{
     
 }
 
+@media screen and (min-width: 740px){
+    #menu-on-sm-devices{
+        visibility: hidden;
+    }
+}
+
 @media screen and (max-width: 740px){
     .header-menu{
         display: none;
     }
-    .menu-btn{
+    .menu-btn-a-tag{
         display: flex;
         align-items: center;
         justify-content: center;
     }
 }
-
-
 
 @media screen and (max-width: 494px){
     .container{
@@ -150,3 +155,36 @@ p{
         margin-bottom:90px
     }
 }
+
+#menu-on-sm-devices{
+    display: none;
+}
+
+.menu-items-on-small-devices{
+    list-style: none;
+}
+
+li{
+    text-align: center;
+}
+
+#menu-on-sm-devices:target{
+    z-index: 1;
+    display: block;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0); 
+    min-width: 20%;
+    height: 150px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+a .menu-btn-a-tag{
+    display: none;
+}
+
